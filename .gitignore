@@ -1,0 +1,7 @@
+_texts/
+texts/
+_images/
+images/
+out.json
+ruby-vision-*.json
+.DS_Store
