@@ -4,5 +4,8 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
+gem "google-cloud-vision"
+gem "google-cloud-storage"
+
 # gem "rails"
 gem 'zip_code_jp'

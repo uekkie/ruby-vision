@@ -1,7 +1,8 @@
-_texts/
-texts/
-_images/
-images/
+images
+_images
+texts
+_texts
+vendor/bundle
+ruby-vision-591d16cef550.json
 out.json
-ruby-vision-*.json
 .DS_Store

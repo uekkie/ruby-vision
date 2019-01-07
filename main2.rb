@@ -1,7 +1,9 @@
-images = Dir.glob("#{ARGV.first}/*.jpg")
-
+images = Dir.glob("#{ARGV.first}").take(1)
+# images = Dir.glob("#{ARGV.first}/*.jpg")
+# puts images
+# exit
 if images.empty?
-  puts "imagesフォルダーがみつかりません"
+  puts "対象ファイルがみつかりません"
   exit
 end
 images = images.select{|file| !File.exist?("#{file}.txt")}.take(10)
