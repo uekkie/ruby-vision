@@ -10,7 +10,7 @@ $ bundle
 
 - 対象のファイルを指定する
 ```shell
-$ bundle exec detect_images.rb "./images/*.png"
+$ bundle exec ruby detect_images.rb "./images/*.png"
 ```
 
 ## PDFの文字認識
