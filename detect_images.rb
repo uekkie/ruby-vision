@@ -1,7 +1,5 @@
-images = Dir.glob("#{ARGV.first}").take(1)
-# images = Dir.glob("#{ARGV.first}/*.jpg")
-# puts images
-# exit
+images = Dir.glob("#{ARGV.first}")
+
 if images.empty?
   puts "対象ファイルがみつかりません"
   exit
@@ -21,7 +19,6 @@ image_annotator_client = Google::Cloud::Vision::ImageAnnotator.new(version: :v1)
 response = image_annotator_client.document_text_detection(images: images)
 
 response.responses.each_with_index do |result, index|
-  
   File.open(texts[index], 'w') do |file|
     puts "processing ... #{file.path}"
     puts result.text_annotations.first&.description.slice(1,5)
